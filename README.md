@@ -1,7 +1,7 @@
 About conda-env-builder
 =======================
 
-Home: https://github.com/nh13/conda-env-builder
+Home: https://github.com/conda-incubator/conda-env-builder
 
 Package license: MIT
 
