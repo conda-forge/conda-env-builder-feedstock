@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 {% set name = "conda-env-builder" %}
 
 package:
@@ -8,13 +8,13 @@ package:
 source:
   - url: https://github.com/conda-incubator/{{ name }}/releases/download/{{ version }}/conda-env-builder-{{ version }}.jar
     folder: jar/
-    sha256: e5e4751fa1e84f8fd04f7278af6ffccebc1f77f4a6a6a1298a9c67c0bf5d9718
+    sha256: a0408967ac63553385f78a627ff5f7783c148b2f82840b378cdb419930d10e51
   - url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
     folder: source/
-    sha256: 89083e3307aa6393200a94e858ad7c1efeceeaafc76f379b81ef133046a79e7d
+    sha256: 8c7f37f09d8394c9ea7cb9532c24033ef5339469226f7d7029c3cad06864a502
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
 
 requirements:
   run:
@@ -36,4 +36,3 @@ about:
 extra:
   recipe-maintainers:
     - nh13
-    - NatPRoach
