@@ -1,4 +1,4 @@
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 {% set name = "conda-env-builder" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
   - url: https://github.com/conda-incubator/{{ name }}/releases/download/{{ version }}/conda-env-builder-{{ version }}.jar
     folder: jar/
-    sha256: a0408967ac63553385f78a627ff5f7783c148b2f82840b378cdb419930d10e51
+    sha256: 44f24fbec49ec3854c7168846c06c659f83fdb3382ee624c7e5559340bda1937
   - url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
     folder: source/
-    sha256: 8c7f37f09d8394c9ea7cb9532c24033ef5339469226f7d7029c3cad06864a502
+    sha256: 205c0f4d2c95f8d5195c34d600f1fca2601420483d59e82edc6c70edbbf13e53
 build:
   skip: true  # [win]
   number: 0
