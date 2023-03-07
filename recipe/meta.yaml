@@ -1,4 +1,4 @@
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 {% set name = "conda-env-builder" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
   - url: https://github.com/conda-incubator/{{ name }}/releases/download/{{ version }}/conda-env-builder-{{ version }}.jar
     folder: jar/
-    sha256: 44f24fbec49ec3854c7168846c06c659f83fdb3382ee624c7e5559340bda1937
+    sha256: b92613f58561b55cd1343b142e86975c5a742948fb6aaded1299c7c07b03dc3c
   - url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
     folder: source/
-    sha256: 205c0f4d2c95f8d5195c34d600f1fca2601420483d59e82edc6c70edbbf13e53
+    sha256: 28c5419f7da83121094e8a1e3836e5395c3739f87f39a2b8f4ff660c83cf4ed2
 build:
   skip: true  # [win]
   number: 0
@@ -23,8 +23,8 @@ requirements:
 
 test:
   commands:
-    - 'conda-env-builder 2>&1 | grep "Assemble"'
-    - 'conda-env-builder --version 2>&1 | grep "Version"'
+    - conda-env-builder 2>&1 | grep "Assemble"
+    - conda-env-builder --version 2>&1 | grep "Version"
 
 about:
   home: https://github.com/conda-incubator/conda-env-builder
